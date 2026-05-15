@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanika Patil | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0d9488;   /* teal */
+      --secondary: #ecfeff; /* light cyan */
+      --accent: #f59e0b;    /* amber */
+      --dark: #0f172a;
+      --light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f0fdfa, #ffffff);
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+
+    /* HERO */
+    header {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary), #0f766e);
+      color: var(--light);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .typing {
+      font-size: 1.4rem;
+      border-right: 3px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.8s infinite;
+    }
+
+    @keyframes typing { to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+
+    header .cta {
+      margin-top: 30px;
+      padding: 12px 26px;
+      background: var(--accent);
+      color: #000;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    header .cta:hover { transform: scale(1.1); }
+
+    /* SECTION */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px; /* reduced vertical spacing */
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.show { opacity: 1; transform: translateY(0); }
+
+    .section-title {
+      font-size: 2.1rem; /* slightly smaller */
+      color: var(--primary);
+      margin-bottom: 20px; /* reduced gap */
+      border-left: 6px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .card {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      margin-bottom: 18px; /* reduced card spacing */
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+
+    /* SKILLS */
+    .skills span {
+      display: inline-block;
+      background: var(--secondary);
+      color: var(--primary);
+      padding: 12px 20px;
+      margin: 8px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .skills span:hover {
+      background: var(--primary);
+      color: white;
+      transform: scale(1.15);
+    }
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(135deg, var(--primary), #0f766e);
+      color: var(--light);
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.3rem; }
+      .typing { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sanika Sachin Patil</h1>
+  <div class="typing">Aspiring Software Developer | CSE Undergraduate</div>
+  <p style="margin-top:15px;">Kolhapur, Maharashtra, India</p>
+  <a href="#projects" class="cta">View My Work</a>
+</header>
+
+<section>
+  <h2 class="section-title">About Me</h2>
+  <div class="card">
+    I am a motivated Computer Science Engineering student with a strong foundation in Java, C++, and web technologies.
+    I enjoy solving problems, building clean interfaces, and working on practical projects.
+    Along with technical skills, I actively participate in leadership and management activities which help me work
+    effectively in team-based environments.
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Education</h2>
+  <div class="card">
+    <strong>B.Tech – Computer Science & Engineering</strong><br>
+    Rajarambapu Institute of Technology, Rajaramnagar<br>
+    CGPA: <strong>7.62</strong> (2022 – Present)
+    <br><br>
+    <strong>HSC</strong> – 76%<br>
+    Shrimati Indira Gandhi Jr. College
+    <br><br>
+    <strong>SSC</strong> – 93.60%<br>
+    Jaywant Madhyamik Vidyalay, Majale
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="card skills">
+    <span>Java</span><span>C++</span><span>Python (Basics)</span>
+    <span>HTML</span><span>CSS</span><span>SQL</span>
+    <span>DBMS</span><span>OOP Concepts</span>
+    <span>Problem Solving</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="card">
+    <strong>Employee Management System</strong> (Java)
+    <ul>
+      <li>Designed and developed a console-based Java application</li>
+      <li>Implemented employee add, search, and display functionality</li>
+      <li>Used Object-Oriented Programming principles for scalability</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <strong>Justicelink – Criminal Law Information Portal</strong>
+    <ul>
+      <li>Developed a web portal to provide clear criminal law information</li>
+      <li>Displayed punishments and bailable/non-bailable status</li>
+      <li>Integrated chatbot for user queries</li>
+      <li>Implemented fast search for legal information</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Experience</h2>
+  <div class="card">
+    <strong>Management Co-ordinator – Entrepreneurship Development Cell</strong>
+    <ul>
+      <li>Managed a 100+ student entrepreneurship community</li>
+      <li>Organized "Entrepreneur of the Month" initiatives</li>
+      <li>Coordinated IIT Bombay E-Summit participation</li>
+    </ul>
+    <br>
+    <strong>Event Management Co-ordinator – CSESA</strong>
+    <ul>
+      <li>Assisted in planning and executing technical events</li>
+      <li>Worked closely with teams to ensure smooth execution</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Certifications</h2>
+  <div class="card">
+    <ul>
+      <li>DBMS & SQL – Infosys Springboard</li>
+      <li>Basics of Python – Completion Certificate</li>
+      <li>NPTEL – Introduction to Machine Learning</li>
+      <li>AICTE – EduSkills AI-ML Virtual Internship</li>
+      <li>IIT Bombay E-Summit 2023</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>📞 7744856849 | ✉️ sanikapatil6849@gmail.com</p>
+  <p><a href="http://www.linkedin.com/in/sanika-patil-a79a1a260" target="_blank">LinkedIn Profile</a></p>
+  <p>© 2026 Sanika Sachin Patil</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const reveal = () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) sec.classList.add('show');
+    });
+  };
+  window.addEventListener('scroll', reveal);
+  reveal();
+</script>
+
+</body>
+</html>
